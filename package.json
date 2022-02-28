@@ -1,0 +1,26 @@
+{
+  "name": "typescript-json-fetch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anac-lalala/typescript-json-fetch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anac-lalala/typescript-json-fetch/issues"
+  },
+  "homepage": "https://github.com/anac-lalala/typescript-json-fetch#readme",
+  "dependencies": {
+    "axios": "^0.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
+}
