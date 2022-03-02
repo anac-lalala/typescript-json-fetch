@@ -1,6 +1,6 @@
-let apples: number = 5; // type anotation usually are const
-let applesSecond = 5; // this is an inference type, in fact in this file all the annotations can be deleted and won't be errors
-// If declaration and initialization are on the same line, Typescript will figure out the type of the variable for us like applesSecond
+let apples: number = 5; // type anotations usually are const
+const applesSecond = 5; // this is an inference type, in fact in this file all the annotations can be deleted and won't be errors
+// If declaration and initialization are on the same line, Typescript will figure out the type of the variable for us unlike 'applesError'
 let applesError;
 applesError = 5;
 
@@ -14,7 +14,7 @@ let nothing: undefined = undefined;
 let now: Date = new Date();
 
 //Array
-let colors: string[] = ["red", "green", "blue"]; // string[] declarates that the type is an array of strings and the ['red', 'green', 'blue'] creates an array
+const colors: string[] = ["red", "green", "blue"]; // string[] declarates that the type is an array of strings and the ['red', 'green', 'blue'] creates an array
 let myNumbers: number[] = [1, 2, 3];
 let truths: boolean[] = [true, true, false];
 
