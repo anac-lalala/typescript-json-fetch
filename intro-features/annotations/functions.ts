@@ -78,3 +78,30 @@ const throwErrorVoid = (message: string): void => {
     throw new Error(message);
   }
 };
+
+// =======================
+// Functions and parameters 'Destructuring with annotations
+// =======================
+const todaysWeather = {
+  date: new Date(),
+  weather: "sunny",
+};
+
+const logWeather = (forecast: { date: Date; weather: string }): void => {
+  console.log(forecast.date);
+  console.log(forecast.weather);
+};
+logWeather(todaysWeather);
+
+// Distructuring the paramethers in ES2015
+// In this case destructuring and type notation are thw separate objects
+const logWeatherE5 = ({
+  date,
+  weather,
+}: {
+  date: Date;
+  weather: string;
+}): void => {
+  console.log(date);
+  console.log(weather);
+};
