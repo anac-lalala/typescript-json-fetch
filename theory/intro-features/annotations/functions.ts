@@ -15,6 +15,7 @@ const addB = (a, b): number => {
 const addC = (a: number, b: number): number => {
   return a + b;
 };
+
 // =======================
 // Type Inference for functions
 // =======================
@@ -49,15 +50,17 @@ const divideV = function (a: number, b: number): number {
 // =======================
 // Void
 // =======================
+// when we're not going to return something
+// (usually that means it returns undefined implicitly)
 
 const voidTest = (message: string): void => {
-  return null; // can return undefine or simply not return anything at all
+  return undefined; // can't return null or simply returns nothing at all
 };
 
 // =======================
 // Never
 // =======================
-// Used when the function is never ever going to return anything
+// Used when the function is never going to return
 // Usage is pretty rare... but here's the example
 
 const throwError = (message: string): never => {
@@ -93,8 +96,10 @@ const logWeather = (forecast: { date: Date; weather: string }): void => {
 };
 logWeather(todaysWeather);
 
+// =======================
 // Distructuring the paramethers in ES2015
-// In this case destructuring and type notation are thw separate objects
+// =======================
+// In this case destructuring and type notation are two separate objects
 const logWeatherE5 = ({
   date,
   weather,

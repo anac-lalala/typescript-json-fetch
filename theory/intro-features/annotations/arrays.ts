@@ -21,30 +21,32 @@ carsByMake = [
 ];
 
 // =======================
-// Inference
+// Inferenced Help by TS
 // =======================
 // Why do we care? This has advantages and downsides
-// ☑ Ts can do type inference when extracting values from an array
+// ☑ TS can do type inference when extracting values from an array
 
-const car = carMakers[0]; // it nows that this is an string
-const mycar = carMakers.pop(); // same here
+const car = carMakers[0]; // TS knows that this is a string
+const mycar = carMakers.pop(); // Same here
 
-// ☑ Ts can prevent us from adding incompatible values to the array
-// We can get help with 'map', 'reduce', 'forEach' functions
-// so it adds autocomplete to the variable being pass into the funtion
+// ☑ TS can prevent us from adding incompatible values to the array
+//  carMakers.push(100) -> Error
 
+// ☑ TS can provide help with 'map', 'reduce', 'forEach' functions
+// so suggests autocomplete to the variable being pass into the funtion
 carMakers.map((car: string): string => {
   return car.toUpperCase();
 });
 
-// ☑ Ts can prevent us from adding incompatible values to the array
-
-// carMakers.push(100);
+// =======================
+// Flexible types inside an array
+// =======================
 // To add a different kind of value we have to do something additional
 
 let importantDates: (Date | string)[] = [new Date()];
 
-importantDates.push("2030-10-10");
+importantDates.push("2030-10-10"); // this is a string and there is no error
 importantDates.push(new Date());
+// importantDates.push(10); // but number still registers as an error
 
 // We use arrays to represent a collaction of records with some arbitraty order

@@ -1,8 +1,10 @@
 // =======================
 // What is an 'any' type:
 // =======================
-// A type that indicates that typescrupt has no idea what is going on
+
+// A type that indicates that TS has no idea what is going on
 // Is better to avoid it at all costs
+// If the declaration and initialization of a varible start on the same line, there's no need of annotation
 
 // =======================
 // When to use annotations Case 1
@@ -25,6 +27,10 @@ const coordinatesFixed: { x: number; y: number } = JSON.parse(json);
 // =======================
 // 2) When we declare a variable on one line and initialize it later
 
+// const vegetables; -> vegetables: any
+const fruits: string[] = [];
+fruits.push("peach");
+
 let words = ["red", "blue", "green"];
 // let foundWord: boolean; // This is option A, to declare before initialiaze
 let foundWord = false; // This is option B, to declare and initialiaze at the same time. Is the best option
@@ -38,10 +44,10 @@ for (let i = 0; i < words.length; i++) {
 // =======================
 // When to use annotations  Case 3
 // =======================
-// When we hant a variable to have a type that can't be interferred
+// When we have a variable to have a type that can't be infered
 // When we have to provide more than one type
 
-let numbers = [-10, -1, -12];
+let numbers = [-10, -1, 12];
 let numberAbobeZero: boolean | number = false;
 
 for (let i = 0; i < numbers.length; i++) {
